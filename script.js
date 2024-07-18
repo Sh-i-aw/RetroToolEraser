@@ -16,7 +16,12 @@ window.onload = () => {
 
 function main() {
     const button = document.createElement('button');
-    button.textContent = "Hello Button";
+    button.textContent = "Erase Board!";
+    button.style.padding = "5px";
+    button.style.borderRadius = "4px";
+    button.style.backgroundColor = "lightyellow";
+
+
     button.addEventListener('click', ()=>{
         const deleteButtons = document.querySelectorAll('[data-cy="public-section"]  [data-cy="delete"]');
         deleteButtons.forEach((button) => button.click());
