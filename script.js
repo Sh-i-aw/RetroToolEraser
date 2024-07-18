@@ -15,5 +15,13 @@ window.onload = () => {
 
 
 function main() {
-    alert("Hello world");
+    const button = document.createElement('button');
+    button.textContent = "Hello Button";
+    button.addEventListener('click', ()=>{
+        const deleteButtons = document.querySelectorAll('[data-cy="public-section"]  [data-cy="delete"]');
+        deleteButtons.forEach((button) => button.click());
+    });
+    const roomName = document.querySelector('[data-cy="room-name"]');
+    roomName.appendChild(button);
+
 }
